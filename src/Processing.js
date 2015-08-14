@@ -10857,7 +10857,9 @@
      * @see #PFont
      * @see #text
      */
-    p.textSize = function(size) {
+    p.textSize = function(size, rounding) {
+      rounding = rounding || true;
+      if (rounding) size = Math.round(size*10)/10; // round text-size to nearest 1/10
       curTextFont = PFont.get(curFontName, size);
       curTextSize = size;
       // recache metrics
