@@ -112,7 +112,7 @@ module.exports = function PjsConsole(document) {
     t = args.map(function(t, idx) { return t + (idx+1 === args.length ? "" : " "); }).join('');
     if (e.BufferArray[e.BufferArray.length - 1]) e.BufferArray[e.BufferArray.length - 1] += (t) + "";
     else e.BufferArray.push(t);
-    e.javaconsole.innerHTML = e.BufferArray.join('');
+    e.javaconsole.textContent = e.BufferArray.join('');
     e.showconsole();
   };
 
